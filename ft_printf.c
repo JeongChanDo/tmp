@@ -6,7 +6,7 @@
 /*   By: jdo <jdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 13:22:53 by jdo               #+#    #+#             */
-/*   Updated: 2021/04/27 21:51:58 by jdo              ###   ########.fr       */
+/*   Updated: 2021/04/27 23:04:08 by jdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	check_width_and_prec(va_list ap,
 				info->minus = 1;
 				info->width *= -1;
 			}
-			else
-				info->prec = va_arg(ap, int);
 		}
+		else
+			info->prec = va_arg(ap, int);
 	}
 }
 

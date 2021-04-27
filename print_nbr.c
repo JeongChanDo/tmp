@@ -6,7 +6,7 @@
 /*   By: jdo <jdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 20:56:26 by jdo               #+#    #+#             */
-/*   Updated: 2021/04/27 22:26:22 by jdo              ###   ########.fr       */
+/*   Updated: 2021/04/27 23:39:40 by jdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ int		put_prec_str(unsigned long long nbr, t_info *info, char **buf)
 	}
 	i = 1;
 	if (nbr == 0 && info->prec != 0)
-		(*buf)[ret - i] = 'i';
+		(*buf)[ret - i] = '0';
 	while (nbr)
 	{
-		(*buf)[ret - 1] = ft_baseset(info->type)[nbr % info->nbr_base];
+		(*buf)[ret - i] = ft_baseset(info->type)[nbr % info->nbr_base];
 		nbr /= info->nbr_base;
 		i++;
 	}
